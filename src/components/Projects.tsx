@@ -1,5 +1,3 @@
-// In /src/components/Projects.tsx or similar
-
 import { motion } from "framer-motion";
 import { Github } from "lucide-react";
 import { Button } from "./ui/button";
@@ -22,7 +20,7 @@ export const Projects = () => {
       longDescription: "This project leverages K-means clustering algorithm to analyze customer purchasing patterns and demographic information. The analysis helps businesses identify distinct customer segments for targeted marketing strategies. Visualizations are created using ggplot2 to present the findings effectively.",
       technologies: ["R", "ggplot2", "K-means Clustering", "Data Analysis"],
       githubUrl: "https://github.com/AYUSH0613/Customer-Segmentation-Analysis",
-      image: "/images/customer-segmentation.png"
+      image: "https://images.unsplash.com/photo-1581091012184-7d4503a2536e?auto=format&fit=crop&w=600&q=80"
     },
     {
       title: "Dice Battle Game",
@@ -30,7 +28,7 @@ export const Projects = () => {
       longDescription: "A command-line game built in Java that simulates dice battles between players. Features include multiple difficulty levels, AI opponents with different strategies, and various game modes including tournament play. The project demonstrates object-oriented programming principles and game logic implementation.",
       technologies: ["Java", "Console", "Game Development", "Object-Oriented Programming"],
       githubUrl: "https://github.com/AYUSH0613/DiceBattle",
-      image: "/images/dice-battle.png"
+      image: "https://images.unsplash.com/photo-1611707576185-3d6a3622647d?auto=format&fit=crop&w=600&q=80"
     },
     {
       title: "Expense Tracker API",
@@ -38,7 +36,7 @@ export const Projects = () => {
       longDescription: "A comprehensive backend service built with Spring Boot that allows users to track their expenses. Features include expense categorization, monthly/yearly reports, budget alerts, and secure user authentication. The API is fully documented with Swagger and uses H2 Database for data persistence.",
       technologies: ["Java", "Spring Boot", "H2 Database", "REST API", "JWT Authentication"],
       githubUrl: "https://github.com/AYUSH0613",
-      image: "/images/expense-tracker.png"
+      image: "https://images.unsplash.com/photo-1615391809516-b7b593c96d3e?auto=format&fit=crop&w=600&q=80"
     },
   ];
 
