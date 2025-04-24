@@ -1,44 +1,52 @@
 
 import { motion } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/card";
+import { Award } from "lucide-react";
 
 interface Certification {
   title: string;
-  provider: string;
+  platform: string;
   date: string;
+  url: string;
 }
 
 export const Certifications = () => {
   const certifications: Certification[] = [
     {
-      title: "Supervised ML",
-      provider: "DeepLearning.AI",
-      date: "Sep 2024"
+      title: "Supervised Machine Learning: Regression and Classification",
+      platform: "Coursera",
+      date: "Sep 2024",
+      url: "https://www.coursera.org/account/accomplishments/certificate/AMG6EJO7EVCW"
     },
     {
-      title: "Cloud Security",
-      provider: "NPTEL",
-      date: "Oct 2024"
-    },
-    {
-      title: "DSA",
-      provider: "Board Infinity",
-      date: "July 2024"
-    },
-    {
-      title: "Computer Architecture",
-      provider: "Udemy",
-      date: "Feb 2024"
+      title: "Computer Architecture and Organization Masterclass",
+      platform: "Udemy",
+      date: "Feb 2024",
+      url: "https://www.udemy.com/certificate/UC-067959ea-ba31-4133-9057-586272ce026b/"
     },
     {
       title: "Problem Solving",
-      provider: "HackerRank",
-      date: "Feb 2025"
+      platform: "HackerRank",
+      date: "Feb 2025",
+      url: "https://www.hackerrank.com/certificates/iframe/3fbaaa0714b8"
+    },
+    {
+      title: "Privacy and Security of Social Media and Cloud Computing",
+      platform: "Coursera/NPTEL",
+      date: "Oct 2024",
+      url: "https://www.coursera.org/account/accomplishments/certificate/E3MZM75NVJXU"
+    },
+    {
+      title: "Data Structures & Algorithms",
+      platform: "Coursera/Board Infinity",
+      date: "July 2024",
+      url: "https://www.coursera.org/account/accomplishments/certificate/GG2824L3M2QP"
     }
   ];
 
   return (
-    <section id="certifications" className="py-20 px-4 bg-background">
-      <div className="max-w-4xl mx-auto">
+    <section id="certifications" className="py-20 px-4 bg-background relative">
+      <div className="max-w-6xl mx-auto">
         <motion.h2 
           className="text-3xl md:text-4xl font-bold mb-12 text-center text-white"
           initial={{ opacity: 0 }}
@@ -48,24 +56,44 @@ export const Certifications = () => {
           Certifications
         </motion.h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {certifications.map((cert, index) => (
             <motion.div
               key={index}
-              className="cert-card"
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
-              viewport={{ once: true, margin: "-100px" }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true, margin: "-50px" }}
             >
-              <h3 className="font-semibold text-white mb-1">{cert.title}</h3>
-              <p className="text-sm text-purple-300 mb-1">{cert.provider}</p>
-              <p className="text-xs text-gray-400">{cert.date}</p>
+              <a 
+                href={cert.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block h-full"
+              >
+                <Card className="h-full bg-white/5 hover:bg-white/10 transition-all duration-300 border-purple-500/20">
+                  <CardContent className="p-6">
+                    <div className="flex items-start gap-3">
+                      <Award className="w-6 h-6 text-purple-400 flex-shrink-0 mt-1" />
+                      <div className="space-y-2">
+                        <h3 className="font-semibold text-lg text-white leading-tight">
+                          {cert.title}
+                        </h3>
+                        <p className="text-sm text-purple-300">
+                          {cert.platform}
+                        </p>
+                        <p className="text-xs text-gray-400">
+                          {cert.date}
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </a>
             </motion.div>
           ))}
         </div>
       </div>
-      <div className="section-wave top absolute -top-1 left-0 right-0 z-10"></div>
     </section>
   );
 };
