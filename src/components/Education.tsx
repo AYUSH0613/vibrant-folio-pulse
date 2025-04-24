@@ -1,5 +1,6 @@
 
 import { motion } from "framer-motion";
+import { GraduationCap } from "lucide-react";
 
 export const Education = () => {
   return (
@@ -14,7 +15,7 @@ export const Education = () => {
           Education
         </motion.h2>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="space-y-12">
           <motion.div 
             className="timeline-item"
             initial={{ opacity: 0, x: -50 }}
@@ -22,15 +23,22 @@ export const Education = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true, margin: "-100px" }}
           >
-            <h3 className="text-xl font-semibold text-white mb-1">
-              B.Tech in Computer Science Engineering
-            </h3>
-            <h4 className="text-purple-300 mb-2">Lovely Professional University, Punjab</h4>
-            <ul className="text-gray-300 list-disc list-inside space-y-1">
-              <li>Specialization: Data Science and Engineering</li>
-              <li>CGPA: 7.70</li>
-              <li>Sep 2022 – Present</li>
-            </ul>
+            <div className="flex items-start gap-4">
+              <div className="bg-purple-500/20 p-2 rounded-full">
+                <GraduationCap className="h-6 w-6 text-purple-300" />
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-white mb-1">
+                  B.Tech in Computer Science Engineering
+                </h3>
+                <h4 className="text-purple-300 mb-2">Lovely Professional University, Punjab</h4>
+                <ul className="text-gray-300 list-disc list-inside space-y-1">
+                  <li>Specialization: Data Science and Engineering</li>
+                  <li>CGPA: 7.70</li>
+                  <li>Sep 2022 – Present</li>
+                </ul>
+              </div>
+            </div>
           </motion.div>
 
           <motion.div 
@@ -40,18 +48,24 @@ export const Education = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true, margin: "-100px" }}
           >
-            <h3 className="text-xl font-semibold text-white mb-1">
-              Intermediate (12th Grade)
-            </h3>
-            <h4 className="text-purple-300 mb-2">H.P.R.R Adarsh Inter College, Agra, Uttar Pradesh</h4>
-            <ul className="text-gray-300 list-disc list-inside space-y-1">
-              <li>Percentage: 76%</li>
-              <li>2019 – 2021</li>
-            </ul>
+            <div className="flex items-start gap-4">
+              <div className="bg-purple-500/20 p-2 rounded-full">
+                <GraduationCap className="h-6 w-6 text-purple-300" />
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold text-white mb-1">
+                  Intermediate (12th Grade)
+                </h3>
+                <h4 className="text-purple-300 mb-2">H.P.R.R Adarsh Inter College, Agra, Uttar Pradesh</h4>
+                <ul className="text-gray-300 list-disc list-inside space-y-1">
+                  <li>Percentage: 76%</li>
+                  <li>2019 – 2021</li>
+                </ul>
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>
-      <div className="section-wave top absolute -top-1 left-0 right-0 z-10"></div>
     </section>
   );
 };

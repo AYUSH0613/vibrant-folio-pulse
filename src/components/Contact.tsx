@@ -1,6 +1,7 @@
 
 import { motion } from "framer-motion";
-import { Mail, Github, Linkedin } from "lucide-react";
+import { Mail, Github, Linkedin, MapPin } from "lucide-react";
+import { Card, CardContent } from "./ui/card";
 
 export const Contact = () => {
   const contactInfo = [
@@ -21,6 +22,12 @@ export const Contact = () => {
       label: "GitHub",
       value: "github.com/AYUSH0613",
       link: "https://github.com/AYUSH0613"
+    },
+    {
+      icon: <MapPin className="h-5 w-5" />,
+      label: "Location",
+      value: "Agra, Uttar Pradesh",
+      link: "https://goo.gl/maps/WoqTLrm8EpZyCbHj9"
     }
   ];
 
@@ -38,34 +45,82 @@ export const Contact = () => {
           Contact
         </motion.h2>
 
-        <motion.div 
-          className="space-y-6 md:space-y-4"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
         >
-          {contactInfo.map((item, index) => (
-            <motion.div
-              key={index}
-              className="flex items-center justify-center gap-3 hover-scale"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              viewport={{ once: true, margin: "-100px" }}
-            >
-              <div className="p-2 rounded-full bg-white/10">
-                {item.icon}
+          <Card className="bg-white/5 border-white/10 backdrop-blur-md">
+            <CardContent className="p-6">
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="space-y-6">
+                  {contactInfo.slice(0, 2).map((item, index) => (
+                    <motion.div
+                      key={index}
+                      className="flex items-center gap-4 hover-scale group"
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.4, delay: index * 0.1 }}
+                      viewport={{ once: true, margin: "-100px" }}
+                    >
+                      <div className="p-2 rounded-full bg-white/10 group-hover:bg-purple-500/20 transition-colors">
+                        {item.icon}
+                      </div>
+                      <div>
+                        <p className="text-xs text-gray-400">{item.label}</p>
+                        <a 
+                          href={item.link} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="text-white hover:text-purple-300 transition-colors"
+                        >
+                          {item.value}
+                        </a>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+                
+                <div className="space-y-6">
+                  {contactInfo.slice(2).map((item, index) => (
+                    <motion.div
+                      key={index}
+                      className="flex items-center gap-4 hover-scale group"
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.4, delay: (index + 2) * 0.1 }}
+                      viewport={{ once: true, margin: "-100px" }}
+                    >
+                      <div className="p-2 rounded-full bg-white/10 group-hover:bg-purple-500/20 transition-colors">
+                        {item.icon}
+                      </div>
+                      <div>
+                        <p className="text-xs text-gray-400">{item.label}</p>
+                        <a 
+                          href={item.link} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          className="text-white hover:text-purple-300 transition-colors"
+                        >
+                          {item.value}
+                        </a>
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
               </div>
-              <a 
-                href={item.link} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                className="text-white hover:text-purple-300 transition-colors"
+              
+              <motion.p 
+                className="text-center mt-8 text-purple-200 italic"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+                viewport={{ once: true, margin: "-100px" }}
               >
-                {item.value}
-              </a>
-            </motion.div>
-          ))}
+                Feel free to connect for collaborations or questions!
+              </motion.p>
+            </CardContent>
+          </Card>
         </motion.div>
       </div>
     </section>

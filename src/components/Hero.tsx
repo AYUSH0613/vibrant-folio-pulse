@@ -6,7 +6,7 @@ import { ArrowDown, FileText, Rocket } from "lucide-react";
 export const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center relative tech-background overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/40 to-background z-10"></div>
       
       <div className="max-w-4xl mx-auto px-4 py-20 z-20 text-center">
         <motion.div
@@ -20,7 +20,7 @@ export const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Crafting Scalable Code with Java & Logic 💡
+            Hi, I'm Ayush Gupta 👋
           </motion.h1>
           
           <motion.p 
@@ -29,7 +29,7 @@ export const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
-            Backend Developer | Data Science Enthusiast | DSA Lover
+            Java Developer • Problem Solver • Backend Enthusiast • Data Science Enthusiast
           </motion.p>
           
           <motion.div 
