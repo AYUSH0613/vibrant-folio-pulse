@@ -1,6 +1,6 @@
 
 import { motion } from "framer-motion";
-import { Github } from "lucide-react";
+import { Github, ExternalLink } from "lucide-react";
 import { Button } from "./ui/button";
 import { Card, CardContent } from "./ui/card";
 import { Badge } from "./ui/badge";
@@ -8,6 +8,7 @@ import { Badge } from "./ui/badge";
 interface Project {
   title: string;
   description: string;
+  longDescription: string;
   technologies: string[];
   githubUrl: string;
   image?: string;
@@ -18,31 +19,34 @@ export const Projects = () => {
     {
       title: "Customer Segmentation Analysis",
       description: "Using clustering techniques to identify customer groups based on purchasing behaviors and demographics.",
-      technologies: ["R", "ggplot2", "Data Analysis"],
+      longDescription: "This project leverages K-means clustering algorithm to analyze customer purchasing patterns and demographic information. The analysis helps businesses identify distinct customer segments for targeted marketing strategies. Visualizations are created using ggplot2 to present the findings effectively.",
+      technologies: ["R", "ggplot2", "K-means Clustering", "Data Analysis"],
       githubUrl: "https://github.com/AYUSH0613/Customer-Segmentation-Analysis",
       image: "/placeholder.svg"
     },
     {
       title: "Dice Battle Game",
       description: "Java console-based dice competition game with multiple game modes and AI opponents.",
-      technologies: ["Java", "Console", "Game Development"],
+      longDescription: "A command-line game built in Java that simulates dice battles between players. Features include multiple difficulty levels, AI opponents with different strategies, and various game modes including tournament play. The project demonstrates object-oriented programming principles and game logic implementation.",
+      technologies: ["Java", "Console", "Game Development", "Object-Oriented Programming"],
       githubUrl: "https://github.com/AYUSH0613/DiceBattle",
       image: "/placeholder.svg"
     },
     {
       title: "Expense Tracker API",
       description: "RESTful API for tracking personal expenses with categories, reports, and user authentication.",
-      technologies: ["Java", "Spring Boot", "H2 Database", "REST API"],
+      longDescription: "A comprehensive backend service built with Spring Boot that allows users to track their expenses. Features include expense categorization, monthly/yearly reports, budget alerts, and secure user authentication. The API is fully documented with Swagger and uses H2 Database for data persistence.",
+      technologies: ["Java", "Spring Boot", "H2 Database", "REST API", "JWT Authentication"],
       githubUrl: "https://github.com/AYUSH0613",
       image: "/placeholder.svg"
     },
   ];
 
   return (
-    <section id="projects" className="py-20 px-4 gradient-background relative">
+    <section id="projects" className="py-20 px-4 gradient-background relative overflow-visible">
       <div className="section-wave top absolute -top-1 left-0 right-0 z-10"></div>
       
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl mx-auto relative">
         <motion.h2 
           className="text-3xl md:text-4xl font-bold mb-12 text-center text-white"
           initial={{ opacity: 0 }}
@@ -60,14 +64,14 @@ export const Projects = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true, margin: "-100px" }}
-              className="bg-white/5 rounded-xl p-6 backdrop-blur-sm"
+              className="bg-black/30 rounded-xl p-6 backdrop-blur-sm border border-white/10"
             >
               <div className="flex flex-col md:flex-row gap-6">
                 <div className="md:w-1/4 flex justify-center items-center">
                   <img 
                     src={project.image} 
                     alt={project.title} 
-                    className="rounded-lg w-full max-w-[200px] h-auto object-cover aspect-square bg-white/10"
+                    className="rounded-lg w-full max-w-[200px] h-auto object-cover aspect-square bg-purple-500/20"
                   />
                 </div>
                 
@@ -83,6 +87,10 @@ export const Projects = () => {
                   </div>
                   
                   <p className="text-gray-300">{project.description}</p>
+                  
+                  <div className="mt-2 text-sm text-gray-400">
+                    <p>{project.longDescription}</p>
+                  </div>
                   
                   <Button 
                     variant="outline" 

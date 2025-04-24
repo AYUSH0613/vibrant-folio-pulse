@@ -64,7 +64,7 @@ export const Certifications = () => {
           Certifications
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {certifications.map((cert, index) => (
             <motion.div
               key={index}
@@ -92,7 +92,12 @@ export const Certifications = () => {
                     </CardContent>
                   </Card>
                 </HoverCardTrigger>
-                <HoverCardContent className="w-80 backdrop-blur-md bg-black/80 border-purple-500/30 text-white">
+                <HoverCardContent 
+                  className="w-80 backdrop-blur-md bg-black/80 border-purple-500/30 text-white"
+                  side="top"
+                  align="center"
+                  sideOffset={5}
+                >
                   <div className="space-y-3">
                     <h4 className="font-medium text-purple-300">{cert.platform}</h4>
                     <p className="text-xs text-gray-300">{cert.date}</p>
