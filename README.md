@@ -1,73 +1,54 @@
-# Welcome to your Lovable project
+# 👋 Hi, I'm Ayush Gupta
 
-## Project info
+I'm a dedicated programmer with a strong passion for **problem-solving**, **data structures**, and **algorithms**. I focus on writing clean, efficient solutions and building scalable backend systems.
 
-**URL**: https://lovable.dev/projects/1337aa0c-db4a-470f-b6ec-3e1d2096f924
+---
 
-## How can I edit this code?
+## 🚀 About Me
 
-There are several ways of editing your application.
+- 💻 Competitive Programmer with 350+ problems solved on LeetCode  
+- 🧠 Strong logical thinker with a knack for algorithmic design  
+- 🔧 Backend Developer with experience in Java, JavaScript, Node.js, and MongoDB  
+- 📊 Curious data analyst using R, Tableau, and Excel for real-world insights  
+- 🔍 Thrive in solving complex challenges and optimizing systems  
+- 📚 Always excited to learn, build, and solve new problems
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/1337aa0c-db4a-470f-b6ec-3e1d2096f924) and start prompting.
+## 🔧 Tech Stack
 
-Changes made via Lovable will be committed automatically to this repo.
+**Languages**  
+`Java` `C++` `Python` `JavaScript` `R`
 
-**Use your preferred IDE**
+**Web & Backend Development**  
+`Node.js` `Express.js` `MongoDB` `Mongoose` `MySQL` `Oracle`
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+**Data Analytics**  
+`RStudio` `Tableau` `Excel` `Hadoop`
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+**Tools & Others**  
+`Git` `GitHub` `Maven` `MVC Architecture`
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 📂 Featured Projects
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- **[ChannelBase](https://github.com/AYUSH0613/ChannelBase)**  
+  Full-stack content management platform built with Node.js, Express, and MongoDB. Includes user authentication and real-time updates.
 
-# Step 3: Install the necessary dependencies.
-npm i
+- **Inventory Manager**  
+  RESTful API backend for managing inventory operations, built using Node.js and MongoDB.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+- **Customer Segmentation Dashboard**  
+  Analytical tool developed using R and Tableau to segment customers and generate business insights.
 
-**Edit a file directly in GitHub**
+Explore more in my repositories!
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+---
 
-**Use GitHub Codespaces**
+## 📫 Connect With Me
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- 💼 [LinkedIn](https://www.linkedin.com/in/your-profile-link)  
+- 📧 Email: your.email@example.com  
 
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/1337aa0c-db4a-470f-b6ec-3e1d2096f924) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Thanks for visiting! Feel free to connect or collaborate—let’s build something impactful together.
